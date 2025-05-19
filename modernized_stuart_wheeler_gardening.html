@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stuart Wheeler Gardening</title>
+  <style>
+    :root {
+      --primary-color: #4CAF50;
+      --background-color: #f4f9f4;
+      --text-color: #2d2d2d;
+      --accent-color: #45a049;
+      --dark-bg: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://i.postimg.cc/5NGMGNPZ/064.jpg') center/cover no-repeat;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✓";
+      color: var(--primary-color);
+      margin-right: 0.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    button {
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--accent-color);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: var(--dark-bg);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: var(--primary-color);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 2rem 1rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Stuart Wheeler Gardening</h1>
+    <p>Professional gardening services in Park Gate, Locks Heath, Hill Head & nearby</p>
+  </header>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Lawn mowing</li>
+      <li>Hedge trimming</li>
+      <li>Weeding</li>
+      <li>Planting & pruning</li>
+      <li>Fence & Shed repairs</li>
+      <li>Garden clearance</li>
+      <li>Pressure washing</li>
+      <li>Seasonal tidy-ups</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Stuart Wheeler Gardening, we offer friendly, reliable, and professional gardening services tailored to your outdoor space. We serve Park Gate, Locks Heath, Hill Head, and surrounding areas within 10 miles of SO31 7GL.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://i.postimg.cc/4yNJJHG5/IMG-20180501-095516033-1.jpg" alt="Lawn with trimmed hedges">
+      <img src="https://i.postimg.cc/XqpYfBPv/144.jpg" alt="Neatly arranged garden border">
+      <img src="https://i.postimg.cc/rpBBn0zm/IMG-20180417-110221770-1.jpg" alt="Gravel path with foliage">
+      <img src="https://i.postimg.cc/Ls3t7G81/IMG-20180515-113524621-1.jpg" alt="Floral garden with seating">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We're happy to provide quotes or discuss your gardening needs.</p>
+    <p><strong>Email:</strong> <a href="mailto:keemoa@aol.com">keemoa@aol.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:07450790710">07450 790710</a></p>
+
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section id="qr">
+  <h2>Scan to Visit Our Website</h2>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://keemoa.github.io/stuart-gardening-site/" alt="QR Code to visit site" style="max-width: 200px;">
+</section>
+<footer>
+    <p>&copy; 2025 Stuart Wheeler Gardening. All rights reserved.</p>
+  </footer>
+</body>
+</html>
